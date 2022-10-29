@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600;700&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    overflow: hidden;
+    background-color: black;
+    height: 100%;
+}
+
+.container{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100vh;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5rem 1rem;
+}
+
+.nav-items{
+    padding: 0.5rem 1rem;
+    list-style: none;
+    margin-right: 1rem;
+}
+
+.nav-items a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+}
+
+.title-container{
+    position: absolute;
+    width: 50%;
+    height: auto;
+    top: 50%;
+    left: 0%;
+    transform: translate(0.5em, -12em);
+}
+
+.title{
+    color: rgb(231, 231, 231);
+    padding: 0 1rem;
+}
+
+.title h1{
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.title p{
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: rgb(177, 177, 177);
+    width: 85%;
+    margin: 1em 0.5em;
+}
+
+.btn{
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 3rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: rgb(0, 114, 255);
+    color: white;
+}
+/* Search Bar */
+:root {
+  --rad: .9rem;
+  --dur: .3s;
+  --color-dark: #2f2f2f;
+  --color-light: #fff;
+  --color-brand: #57bd84;
+  --font-fam: 'Lato', sans-serif;
+  --height: 3rem;
+  --btn-width: 4rem;
+  --bez: cubic-bezier(0, 0, 0.43, 1.49);
+}
+form {
+  position: absolute;
+  width: 30rem;
+  background: var(--color-brand);
+  border-radius: var(--rad);
+  transform: translate(2rem, 17.5rem);
+  
+}
+#search{
+    border: 1em;
+}
+input, button {
+  height: var(--height);
+  font-family: var(--font-fam);
+  border: 0;
+  color: var(--color-dark);
+  font-size: 1.8rem;
+}
+input[type="search"] {
+  outline: 0;
+  width: 100%;
+  background: var(--color-light);
+  padding: 0 1.6rem;
+  border-radius: var(--rad);
+  appearance: none;
+  transition: all var(--dur) var(--bez);
+  transition-property: width, border-radius;
+  z-index: 1;
+  position: relative;
+}
+button {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: var(--btn-width);
+  font-weight: bold;
+  background: var(--color-brand);
+  border-radius: 0 var(--rad) var(--rad) 0;
+}
+input:not(:placeholder-shown) {
+  border-radius: var(--rad) 0 0 var(--rad);
+  width: calc(100% - var(--btn-width));
+}
+label {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+/* Search bar ends */
+
+
+/* Tree information */
+.tree-info-container {
+    position: absolute;
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    background-color: transparent;
+	border-radius: 15px;
+	box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
+    padding: 1em;
+    padding-right: 0em;
+    width: 27em;
+    transform: translate(3em, 1.25em);
+}
+
+.tree-info-container ul {
+    display: none;
+    list-style: none;
+    font-size: 90%;
+}
+#name-num{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tree-name {
+    font-size: 18px;
+    padding: auto;
+}
+
+.tree-name:hover + ul {
+    display: block;
+}
+
+#tree1:hover ~ .tree-name:not(#tree1){
+    display: none;
+}
+#tree2:hover ~ .tree-name:not(#tree2){
+    display: none;
+}
+#tree3:hover ~ .tree-name:not(#tree3){
+    display: none;
+}
+#tree4:hover ~ .tree-name:not(#tree4){
+    display: none;
+}
+#tree5:hover ~ .tree-name:not(#tree5){
+    display: none;
+}
+
+.hide {
+    display: none;
+}
+
+/* Tree information ends*/
+
+
+/*** making responsive ****/
+@media only screen and (max-width: 1085px){
+    .nav-menu{
+        padding: 0.5rem;
+    }
+
+    .title h1{
+        font-size: 1.8rem;
+    }
+
+    .title p{
+        width: 100%;
+        font-size: 0.9rem;
+        margin: 0.5rem 0;
+    }
+
+    .btn{
+        padding: 0.5rem 1rem;
+        margin-top: 1.7rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .title-container{
+        width: 55%;
+    }
+
+    .title{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .nav-menu{
+        padding: 0rem;
+    }
+
+    .nav-items{
+        font-size: 0.9rem;
+    }
+
+    .title-container{
+        width: 45%;
+    }
+
+    .title h1{
+        color: white;
+    }
+
+    .title p{
+        color: rgb(205, 205, 205);
+    }
+}
+
+@media only screen and (max-width: 846px){
+    .nav-items{
+        margin-right: 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 790px){
+    .nav-items{
+        margin-right: 0rem;
+    }
+
+    .title-container{
+        width: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .title p{
+        color: rgb(248, 248, 248);
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .nav-menu{
+        width: 100%;
+    }
+
+    .title-container{
+        width: 100%;
+    }
+}
+
+@media only scree and (max-width: 630px){
+    .nav-menu{
+         width: 100%;
+    }
+
+    .title-container{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 544px){
+    .nav-menu{
+        width: 100%;
+   }
+
+   .title-container{
+       width: 100%;
+   }
+}
+
+@media only screen and (max-width: 472px){
+    .nav-menu{
+        width: 100%;
+   }
+
+   .title-container{
+       width: 100%;
+   }
+}
