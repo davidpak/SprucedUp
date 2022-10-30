@@ -1,26 +1,30 @@
-'use strict';
-
-const e = React.createElement;
-
-class LikeButton extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { liked: false };
-  }
-
-  render() {
-    if (this.state.liked) {
-      return 'You liked this.';
-    }
-
-    return e(
-      'button',
-      { onClick: () => this.setState({ liked: true }) },
-      'Like'
-    );
-  }
+import React from 'react';
+const Progress = ({done}) => {
+	const [style, setStyle] = React.useState({});
+	
+	setTimeout(() => {
+		const newStyle = {
+			opacity: 1,
+			width: `${done}%`
+		}
+		
+		setStyle(newStyle);
+	}, 200);
+	
+	return (
+		<div className="progress">
+			<div className="progress-done" style={style}>
+				{done}%
+			</div>
+		</div>
+	)
 }
 
-const domContainer = document.querySelector('#like_button_container');
-const root = ReactDOM.createRoot(domContainer);
-root.render(e(LikeButton));
+const App = () => (
+	<>
+		<h1>React Progress Bar</h1>
+		<Progress done="80"/>
+	</>
+);
+	
+ReactDOM.render(<App />, document.getElementById('app'));
