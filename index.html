@@ -3,47 +3,85 @@
 
 <head>
 	<meta charset="utf-8">
-	 <link rel="stylesheet" href="styles.css"> 
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  	<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+	<!-- JS Load -->
 	<!-- <script src="login.js"></script> -->
-    <!-- <script src ="js/scripts.js"></script> -->
+	<script src ="js/scripts.js"></script>
+
+	<!-- Loading React (doesn't work on liveserver) -->
+	<script src="js/react.js" type = "text/babel"></script>
 	<title>Project: Dubhacks</title>
 </head>
-<nav class="navigation">
-	<ul class="nav-menu">
-		<li class="nav-items"><a href="#">Home</a></li>
-        <li class="nav-items"><a href="#">Forest</a></li>
-		<li class="nav-items"><a href="https://www.amazon.com/sign-in">
-				<img border="0" alt="Login with Amazon"
-					src="https://images-na.ssl-images-amazon.com/images/G/01/lwa/btnLWA_gry_76x32.png" width="76"
-					height="32" />
-			</a></li>
-	</ul>
-</nav>
 
 <body>
-<section>
-	<!-- testing comments -->
+	<!-- Navigation -->
+	<nav class="navigation">
+		<ul class="nav-menu">
+			<li class="nav-items"><a href="#">Home</a></li>
+			<li class="nav-items"><a href="#">Forest</a></li>
+			<li class="nav-items"><a href="https://www.amazon.com/sign-in">
+					<img border="0" alt="Login with Amazon"
+						src="https://images-na.ssl-images-amazon.com/images/G/01/lwa/btnLWA_gry_76x32.png" width="76"
+						height="32" />
+				</a></li>
+		</ul>
+	</nav>
 
+	<!-- main left -->
 	<div class="title-container">
 		<div class="title">
 			<h1 style="font-size: 330%; margin-top: 5vh; margin-bottom:0">Spruced up</h1>
 			<p style="color: #FF9900; font-size: 150%; margin-top:0; margin-bottom:5vh">Your current tree</p>
 		</div>
-		<div id="progress">
-			<div id="bar">
-				<p id="percent">99%</p>
-			</div>
-		</div>
+		<div id="app"></div>
 	</div>
 
-    <img id="tree" src="assets/img/tree.gif" alt="">
+	<!-- main right -->
+	<img id="tree" src="assets/img/tree.gif" alt="">
 
-      
-</section>
+	<!-- more contents -->
+	<section class="showcase">
+		<div class="container-fluid p-0">
+			<div class="row g-0" id="aqi">
+				<div class="col-lg-6 order-lg-2 text-white showcase-img"
+					style="background-image: url(https://cdn.discordapp.com/attachments/1033450387430178836/1033678443432382524/contrastiveAirQualityClipArtUpdated.png)">
+				</div>
+				<div class="col-lg-6 order-lg-1 my-auto showcase-text">
+					<h2>What about AQI?</h2>
+					<p class="lead mb-0">AQI, or Air Quality Index, is a numerical
+						scale that runs from 0 to 500 and describes the level of air pollution
+						in a specific area. Our alternative, AQI Don't Wanna Die, provides a more
+						straightfoward approach with a "safe" or "unsafe" label, and lets users see and modify crucial
+						factors. </p>
+
+				</div>
+			</div>
+			<div class="row g-0" id="goals">
+				<div class="col-lg-6 text-white showcase-img"
+					style="background-image: url(https://cdn.discordapp.com/attachments/1033450387430178836/1033681943893643294/unknown.png);">
+				</div>
+				<div class="col-lg-6 my-auto showcase-text">
+					<h2>Our Goals</h2>
+					<p class="lead mb-0">
+						We live in a world that provides many resources, from the water we drink,
+						the food we eat, and the air we breathe. Unfortunately,
+						some of these assets may become tainted over time. Most recently,
+						Seattleites experienced particularly poor conditions, having the
+						worst air quality in the world on consecutive days.
+
+						In response to these events, we created this project to keep people safe
+						from hazardous surroundings and spread awareness about air pollution.
 
 
-<br/>
 
-    
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
 </body>
+
 </html>
