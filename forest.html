@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sample_GoogleMap</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- TODO ADD API KEY -->
+  <script src="http://maps.google.com/maps/api/js?key={keyhere}&language=en"></script>
+
+  <script src="js/forest.js"></script>
+  <!-- <script type="module" src="index.js"></script> -->
+  <style>
+    html { height: 100% }
+    body { height: 100% }
+    #map { height: 100%; width: 100%}
+  </style>
+</head>
+
+<body>
+	<nav class="navigation">
+		<ul class="nav-menu">
+			<li class="nav-items"><a href="index.html">Home</a></li>
+			<li class="nav-items"><a href="forest.html">Forest</a></li>
+			<li class="nav-items"><a href="https://www.amazon.com/sign-in">
+					<img border="0" alt="Login with Amazon"
+						src="https://images-na.ssl-images-amazon.com/images/G/01/lwa/btnLWA_gry_76x32.png" width="76"
+						height="32" />
+				</a></li>
+		</ul>
+	</nav>
+
+  <div id="map"></div>
+</body>
+</html>
